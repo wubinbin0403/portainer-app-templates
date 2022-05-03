@@ -3,13 +3,18 @@
   "templates": [
     {
       "type": 1,
-      "title": "ChineseSubFinder",
-      "description": "自动化搞定限定条件下中文字幕下载。",
-      "categories": ["Medias"],
+      "title": "Registry",
+      "description": "Docker image registry",
+      "categories": ["docker"],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
-      "image": "allanpk716/chinesesubfinder:latest",
-      "ports": ["19035/tcp"]
+      "image": "registry:latest",
+      "ports": ["5000/tcp"],
+      "volumes": [
+        {
+          "container": "/var/lib/registry"
+        }
+      ]
     }
   ]
 }
